@@ -14,22 +14,22 @@
     </head>
 
 
-<body class="flex align-middle items-center h-[100vh] justify-center p-5 bg-accent text-white font-light">
+<body class="flex align-middle items-center justify-center p-4 bg-accent text-white font-light min-h-[100vh]">
 
     <!-- container for both boxes -->
-    <div class="container w-[80%] max-w-[1070px] flex mb-2">
+    <div class="container w-[90%] max-w-[1070px] flex flex-col sm:flex-row mb-2 h-[100%] p-4">
 
         <!-- left side content -->
         <div class="left-section flex-1 p-4 border-solid border-2 border-slate-400">
             <div class="gradient">
             <h1 class="heading text-[36px] mb-4">Email Sender <span class="api-span text-warning">API</span> Demo</h1>
             <hr class=" m-auto mb-4">
-            <p class="left-paragraph">Using the connected API you can send an email to the address specific on the right side of this page.</p>
+            <p class="left-paragraph">Using the connected API you can send an email to any address specificied on the right side of this page.</p>
             </div>
         </div>
 
         <!-- right side content -->
-        <div class="right-section foreground flex-1 p-6 border-solid border-2 border-slate-400 border-l-0 align-middle justify-center text-left">
+        <div class="right-section foreground flex-1 p-6 border-solid border-2 border-slate-400 align-middle justify-center text-left">
             <h1 class="text-[36px]">Hey,</h1>
             <p class="text-[20px] mb-4">Welcome to the Email Sender</p>
             <hr class="mb-4">
@@ -50,8 +50,8 @@
                 </div>
 
                 <div class="form-group p-2 mt-8 mb-2">
-                    <p>Email sent!</p>
-                    <button type="button" class="flex align-middle items-center justify-evenly btn btn-warning btn-sm my-2 bg-slate-300 text-gray-700 hover:text-black">
+                    <p class="result opacity-0">Mail sent!</p>
+                    <button type="button" id="send-button" class="flex align-middle items-center justify-evenly btn btn-warning btn-sm my-2 bg-slate-300 text-gray-700 hover:text-black font-normal">
                         <span>Send</span>
                         <i class='bx bx-mail-send text-[18px]'></i>
                     </button>
@@ -63,6 +63,9 @@
     </div>
     
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
     <script src="./script.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </body>
